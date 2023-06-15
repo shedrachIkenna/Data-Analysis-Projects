@@ -1,0 +1,32 @@
+Data Cleaning and Exploration Using Excel 
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+-- Based on certain keywords, I placed the job titles into four categories namely:
+-- Data Scientist
+-- Data Analyst
+-- Machine Learning
+-- Data Engineer
+------------------------------------------------------------------------------------------------------------------------------------------------
+-- I used the Search, Find, Isnumber and Ifs function to perform multiple logical test which categorises the job titles based on certain keywords
+=IFS(
+    ISNUMBER(SEARCH("Data Scientist", B2)), "Data Scientist", 
+    ISNUMBER(FIND("Computational Behavioral Scientist", B2)), "Data Engineer", 
+    ISNUMBER(FIND("Statistics", B2)), "Data Engineer", 
+    ISNUMBER(FIND("Computational Scientist", B2)), "Data Engineer", 
+    ISNUMBER(FIND("Chief Scientist", B2)), "Machine Learning", 
+    ISNUMBER(FIND(" AI", B2)), "Machine Learning", 
+    ISNUMBER(SEARCH("Statistical Scientist", B2)), "Data Scientist", 
+    ISNUMBER(SEARCH("Data Architect", B2)), "Data Engineer", 
+    ISNUMBER(SEARCH("Decision Scientist", B2)), "Data Scientist", 
+    ISNUMBER(SEARCH("Analyst", B2)), "Data Analyst", 
+    ISNUMBER(FIND("RWE", B2)), "Data Scientist", 
+    ISNUMBER(SEARCH("Data Integration and Modeling Engineer", B2)), "Data Engineer", 
+    ISNUMBER(SEARCH("Business Intelligence Analyst", B2)), "Data Analyst",  
+    ISNUMBER(SEARCH("Data Science", B2)), "Data Scientist", 
+    ISNUMBER(SEARCH("Data Analytics", B2)), "Data Analyst",  
+    ISNUMBER(SEARCH("Data Analyst", B2)), "Data Analyst",  
+    ISNUMBER(SEARCH("Data Engineer", B2)), "Data Engineer", 
+    ISNUMBER(SEARCH("Learning", B2)), "Machine Learning", 
+    ISNUMBER(SEARCH("Analytics", B2)), "Data Analyst", 
+    ISNUMBER(SEARCH("Data Modeler", B2)), "Data Engineer"
+    )

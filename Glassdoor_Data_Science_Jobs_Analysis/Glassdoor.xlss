@@ -30,3 +30,28 @@ Data Cleaning and Exploration Using Excel
     ISNUMBER(SEARCH("Analytics", B2)), "Data Analyst", 
     ISNUMBER(SEARCH("Data Modeler", B2)), "Data Engineer"
     )
+
+---------------------------------------------------------------------------------------------------------------------------------------
+--Extracted only the numeric values from the Salary Estimate column
+---------------------------------------------------------------------------------------------------------------------------------------
+-- I extracted the numeric values using the Mid function
+-- I also use the SUBSTITUTE function to remove the '$' and 'k' currency symbols 
+
+=SUBSTITUTE(SUBSTITUTE(MID(F2, 1, FIND("(", F2) - 2), "$", ""), "K", "")
+
+---------------------------------------------------------------------------------------------------------------------------------------
+-- I used the Average function to find the Overall Salary Estimate AVG
+---------------------------------------------------------------------------------------------------------------------------------------
+=AVERAGE(H2:H643)
+
+---------------------------------------------------------------------------------------------------------------------------------------
+-- Based on certain keywords, I was able to check if experience is required from the job description column 
+---------------------------------------------------------------------------------------------------------------------------------------
+-- I used the Search, Isnumber and If function to search for keywords matching "Experience Required" in the Job Desciption Column 
+=IF(ISNUMBER(SEARCH("Experience", J2)),  "Experience Required", 0)
+
+---------------------------------------------------------------------------------------------------------------------------------------
+-- Based on certain keywords as specified in thr formula below, I was able to check if a bachelor's degree is required from the job description column
+---------------------------------------------------------------------------------------------------------------------------------------
+-- I used the If, Seach, Isnumber, Or, 
+=IF(OR(ISNUMBER(SEARCH("Bachelor's Degree", J2)), ISNUMBER(SEARCH("B.sc", J2)),  ISNUMBER(SEARCH("Bachelor", J2)), ISNUMBER(SEARCH("Bsc", J2)), ISNUMBER(SEARCH("MBA", J2)), ISNUMBER(SEARCH("Degree", J2)), ISNUMBER(FIND("BS", J2))), "Bsc Required", 0)

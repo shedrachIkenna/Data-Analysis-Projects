@@ -106,3 +106,11 @@ Data Cleaning and Exploration Using Excel
 -- The logical test checks for certain keywords in each job description to determine whether a SQL skills are required or not
 
     =IF(ISNUMBER(SEARCH("SQL", J2)),  "SQL Required", 0)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Based on certain keywords as specified in thr formula below, I was able to check if Python skills are required from the job description column
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+-- I used the IF, ISNUMBER and SEARCH functions to perform logical tests
+-- The logical test checks for certain keywords in each job description to determine whether a Python skills are required or not
+
+=IF(ISNUMBER(SEARCH("Python", J2)),  "Python Required", 0)

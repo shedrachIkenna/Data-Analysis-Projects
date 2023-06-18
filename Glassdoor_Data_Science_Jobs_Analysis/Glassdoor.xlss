@@ -167,3 +167,11 @@ Data Cleaning and Exploration Using Excel
         ISNUMBER(FIND("excel ", J2))
         ), 
     "Excel Required", 0)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Based on certain keywords as specified in thr formula below, I was able to check if AWS skills are required from the job description column
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+-- I used the IF, ISNUMBER and SEARCH functions to perform logical tests
+-- The logical test checks for certain keywords in each job description to determine whether AWS skills are required or not
+
+=IF(ISNUMBER(SEARCH("AWS", J2)),  "AWS Required", 0)

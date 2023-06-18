@@ -53,5 +53,35 @@ Data Cleaning and Exploration Using Excel
 ---------------------------------------------------------------------------------------------------------------------------------------
 -- Based on certain keywords as specified in thr formula below, I was able to check if a bachelor's degree is required from the job description column
 ---------------------------------------------------------------------------------------------------------------------------------------
--- I used the If, Seach, Isnumber, Or, 
-=IF(OR(ISNUMBER(SEARCH("Bachelor's Degree", J2)), ISNUMBER(SEARCH("B.sc", J2)),  ISNUMBER(SEARCH("Bachelor", J2)), ISNUMBER(SEARCH("Bsc", J2)), ISNUMBER(SEARCH("MBA", J2)), ISNUMBER(SEARCH("Degree", J2)), ISNUMBER(FIND("BS", J2))), "Bsc Required", 0)
+-- I used the IF, OR, ISNUMBER, SEARCH and FIND functions to perform logical tests
+-- The logical test checks for certain keywords in each job description to determine whether a Bachelor degree is required or not
+
+=IF(
+    OR(
+        ISNUMBER(SEARCH("Bachelor's Degree", J2)), 
+        ISNUMBER(SEARCH("B.sc", J2)), 
+        ISNUMBER(SEARCH("Bachelor", J2)), 
+        ISNUMBER(SEARCH("Bsc", J2)), 
+        ISNUMBER(SEARCH("MBA", J2)), 
+        ISNUMBER(SEARCH("Degree", J2)), 
+        ISNUMBER(FIND("BS", J2))
+    ),
+ "Bsc Required", 0)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+-- Based on certain keywords as specified in thr formula below, I was able to check if a Master's degree is required from the job description column
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+-- I used the IF, OR, ISNUMBER, SEARCH and FIND functions to perform logical tests
+-- The logical test checks for certain keywords in each job description to determine whether a Master's degree is required or not
+
+ =IF(
+    OR(
+        ISNUMBER(SEARCH("Master's Degree", J2)), 
+        ISNUMBER(SEARCH("M.sc", J2)), 
+        ISNUMBER(SEARCH("Msc", J2)), 
+        ISNUMBER(SEARCH("M.S", J2)),  
+        ISNUMBER(SEARCH("Master of", J2)),  
+        ISNUMBER(SEARCH("Master in", J2)), 
+        ISNUMBER(FIND("MS", J2))
+        ), 
+    "Masters Required", 0)

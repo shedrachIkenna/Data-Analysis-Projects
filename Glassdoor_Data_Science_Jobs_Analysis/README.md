@@ -36,9 +36,19 @@ After the initial exploration, the data cleaning process was carried out to ensu
 - Transforming variables as needed to align with the analysis objectives.
 
 
+## Data Analysis 
 
-Disclaimer
-Please note that the analyses presented in this repository are for informational and educational purposes only. The findings and insights derived from the data should be interpreted with caution, as they may be based on limited data or subject to various factors. Always refer to the original source and exercise due diligence when making decisions based on the information presented here.
+Once the data was cleaned and prepared, I proceeded with the data analysis using Excel. The analysis involved examining various aspects of the data science job postings dataset, including:
+
+- Identifying trends and patterns in the demand for data science professionals across different industries and regions.
+- Analyzing the most sought-after skills and qualifications for data science job roles.
+- Investigating salary ranges and distribution for data science positions.
+- Extracting insights from job descriptions to identify common keywords and requirements.
+
+
+## Disclaimer
+
+Please note that the analysis presented in this repository are for informational and educational purposes only. The findings and insights derived from the data should be interpreted with caution, as they may be based on limited data or subject to various factors. Always refer to the original source and exercise due diligence when making decisions based on the information presented here.
 
 We hope you find these data analysis projects informative and engaging. Feel free to explore the different projects and leverage the insights to gain a deeper understanding of the data science job market based on the Glassdoor dataset.
 

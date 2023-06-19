@@ -77,7 +77,21 @@ To effectively communicate the findings from the data analysis, I utilized Table
 
 ***
 
-## Disclaimer
+## Key Findings 
+
+Through the analysis of Glassdoor's data science job postings dataset, several key findings were uncovered. We can see that:
+
+- Data scientists are the most in-demand job Role.
+- In general, the most saught after tech skill is python.
+- The average salary for data science jobs is between 120k - 130k range
+- Out of 464 data job postings, 69.40% required a bachelor's degree, 36.60% required a Master's degree and 25.40% required a Ph.D 
+- Data scientist has the highest average salary of 129k.
+- The most saught after tech skill for data analyst and data engineers is Sql. 
+
+By using the filters, we can gain more insights and unravel hidden key findings about specific job roles. For example
+- Above 50% of all machine learning job postings require a Ph.d 
+
+## Note
 
 Please note that this dataset is from kaggle and hasn't been updated for past two years as of the time I executed this project. As such, the findings and insights derived from the data should be interpreted with caution due to various factors. 
 

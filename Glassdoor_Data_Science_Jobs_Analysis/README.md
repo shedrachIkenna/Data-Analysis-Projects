@@ -18,6 +18,14 @@ In this analysis, I leveraged the power of Excel for data exploration, data clea
 
 Additionally, I utilized Tableau for data visualization. Tableau offers a robust platform to create visually appealing and interactive visualizations that help uncover patterns, trends, and key insights from the data. The visualizations provide a clear and intuitive representation of the analysis findings.
 
+## Project Goals
+The primary goal of this repository is to explore and analyze the Glassdoor data science jobs dataset to gain insights into the industry. Through data analysis and visualization techniques, we aim to answer various questions such as:
+
+- What are the most common job titles in the data science field?
+- What are the average salaries of different data science job roles?
+- What are the most in-demand skills for data science jobs?
+- What are most sought after level of education required?
+
 ## Data Exploration 
 
 The data exploration phase involved examining the dataset to understand its structure, contents, and any potential issues or inconsistencies. I used Excel to perform initial data exploration tasks, such as:
@@ -48,17 +56,7 @@ Once the data was cleaned and prepared, I proceeded with the data analysis using
 
 ## Disclaimer
 
-Please note that the analysis presented in this repository are for informational and educational purposes only. The findings and insights derived from the data should be interpreted with caution, as they may be based on limited data or subject to various factors. Always refer to the original source and exercise due diligence when making decisions based on the information presented here.
+Please note that this dataset is from kaggle and hasn't been updated for past two years as of the time I executed this project. As such, the findings and insights derived from the data should be interpreted with caution due to various factors. 
 
-We hope you find these data analysis projects informative and engaging. Feel free to explore the different projects and leverage the insights to gain a deeper understanding of the data science job market based on the Glassdoor dataset.
+I hope you find this data analysis project informative and engaging. 
 
-Happy analyzing!
-
-
-Project Goals
-The primary goal of this repository is to explore and analyze the Glassdoor data science jobs dataset to gain insights into the industry. Through data analysis and visualization techniques, we aim to answer various questions such as:
-
-What are the most common job titles in the data science field?
-How does salary vary across different locations and experience levels?
-What are the most in-demand skills for data science jobs?
-How do company ratings correlate with job satisfaction?

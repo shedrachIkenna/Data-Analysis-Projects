@@ -1,4 +1,4 @@
-## Glassdoor Data science Jobs Data Analysis
+# Glassdoor Data science Jobs Data Analysis
 
 Welcome to the repository for the Glassdoor Data Science Job Postings Data Analysis project! In this project, I have conducted a comprehensive analysis of Glassdoor's data science job postings dataset using Excel for data exploration, data cleaning, and data analysis, and Tableau for data visualization. This repository serves as a resource for exploring the project's code, data, and findings.
 

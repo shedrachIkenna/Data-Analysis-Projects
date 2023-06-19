@@ -19,6 +19,7 @@ In this analysis, I leveraged the power of Excel for data exploration, data clea
 Additionally, I utilized Tableau for data visualization. Tableau offers a robust platform to create visually appealing and interactive visualizations that help uncover patterns, trends, and key insights from the data. The visualizations provide a clear and intuitive representation of the analysis findings.
 
 ## Project Goals
+
 The primary goal of this repository is to explore and analyze the Glassdoor data science jobs dataset to gain insights into the industry. Through data analysis and visualization techniques, we aim to answer various questions such as:
 
 - What are the most common job titles in the data science field?

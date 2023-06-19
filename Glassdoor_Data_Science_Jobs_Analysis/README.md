@@ -54,6 +54,10 @@ Once the data was cleaned and prepared, I proceeded with the data analysis using
 - Investigating salary ranges and distribution for data science positions.
 - Extracting insights from job descriptions to identify common keywords and requirements.
 
+## Data Visualization 
+
+To effectively communicate the findings from the data analysis, I utilized Tableau for creating interactive and visually appealing visualizations. The visualizations provide a clear representation of the key insights and make it easier to understand and interpret the data.
+
 
 ## Disclaimer
 

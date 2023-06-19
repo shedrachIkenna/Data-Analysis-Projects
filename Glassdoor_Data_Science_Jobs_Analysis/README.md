@@ -27,6 +27,13 @@ The primary goal of this repository is to explore and analyze the Glassdoor data
 - What are the most in-demand skills for data science jobs?
 - What are most sought after level of education required?
 
+The answers to these questions can be clearly seen [here](Visualization/Glassdoor_Dataset_Analysis.png). 
+
+
+"The visualization provides answers and solutions to the project's goal-oriented questions."
+
+"The visualization provides a clear depiction of the answers and solutions to the project's key questions and goals."
+
 ## Data Exploration 
 
 The data exploration phase involved examining the dataset to understand its structure, contents, and any potential issues or inconsistencies. I used Excel to perform initial data exploration tasks, such as:

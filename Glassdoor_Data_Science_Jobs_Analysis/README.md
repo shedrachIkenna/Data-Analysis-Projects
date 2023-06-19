@@ -8,15 +8,21 @@ The Glassdoor data science job postings dataset used in this analysis provides a
 
 The dataset offers a valuable snapshot of the data science job market, allowing us to gain insights into the skills and qualifications sought by employers, salary ranges, and geographical distribution of job opportunities.
 
+***
+
 ## Project Overview
 
 In this project, I have analyzed the Glassdoor data science job postings dataset to gain insights into the trends, patterns, and characteristics of data science job postings. The objective was to uncover meaningful information that can inform job seekers, employers, and professionals interested in the field of data science.
+
+***
 
 ## Tools and Techniques Used 
 
 In this analysis, I leveraged the power of Excel for data exploration, data cleaning, and data analysis. Excel provides a versatile and user-friendly environment to perform data manipulations and calculations, enabling us to gain a deep understanding of the dataset.
 
 Additionally, I utilized Tableau for data visualization. Tableau offers a robust platform to create visually appealing and interactive visualizations that help uncover patterns, trends, and key insights from the data. The visualizations provide a clear and intuitive representation of the analysis findings.
+
+***
 
 ## Project Goals
 
@@ -27,12 +33,9 @@ The primary goal of this repository is to explore and analyze the Glassdoor data
 - What are the most in-demand skills for data science jobs?
 - What are most sought after level of education required?
 
-The answers to these questions can be clearly seen [here](Visualization/Glassdoor_Dataset_Analysis.png). 
+The answers to these questions can be clearly seen [here](Visualization/Glassdoor_Dataset_Analysis.png).
 
-
-"The visualization provides answers and solutions to the project's goal-oriented questions."
-
-"The visualization provides a clear depiction of the answers and solutions to the project's key questions and goals."
+***
 
 ## Data Exploration 
 
@@ -41,6 +44,8 @@ The data exploration phase involved examining the dataset to understand its stru
 - Identifying missing values, outliers, or inconsistencies.
 - Assessing the distribution and summary statistics of key variables.
 - Investigating relationships between variables.
+
+***
 
 ## Data Cleaning 
 
@@ -51,6 +56,7 @@ After the initial exploration, the data cleaning process was carried out to ensu
 - Standardizing formats and correcting inconsistencies in variables, such as job titles or locations.
 - Transforming variables as needed to align with the analysis objectives.
 
+***
 
 ## Data Analysis 
 
@@ -61,10 +67,15 @@ Once the data was cleaned and prepared, I proceeded with the data analysis using
 - Investigating salary ranges and distribution for data science positions.
 - Extracting insights from job descriptions to identify common keywords and requirements.
 
+***
+
 ## Data Visualization 
 
 To effectively communicate the findings from the data analysis, I utilized Tableau for creating interactive and visually appealing visualizations. The visualizations provide a clear representation of the key insights and make it easier to understand and interpret the data.
 
+![Glassdoor Dataset Analysis Image](Visualization/Glassdoor_Dataset_Analysis.png) 
+
+***
 
 ## Disclaimer
 

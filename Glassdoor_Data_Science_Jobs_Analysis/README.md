@@ -35,6 +35,8 @@ The primary goal of this repository is to explore and analyze the Glassdoor data
 
 The answers to these questions can be clearly seen [here](Visualization/Glassdoor_Dataset_Analysis.png).
 
+See interactive dashboard [here](https://public.tableau.com/app/profile/shedrach.nwali/viz/DataJobs_16858994320410/DataJobsPostings).
+
 ***
 
 ## Data Exploration 
@@ -72,6 +74,8 @@ Once the data was cleaned and prepared, I proceeded with the data analysis using
 ## Data Visualization 
 
 To effectively communicate the findings from the data analysis, I utilized Tableau for creating interactive and visually appealing visualizations. The visualizations provide a clear representation of the key insights and make it easier to understand and interpret the data.
+
+See interactive dashboard [here](https://public.tableau.com/app/profile/shedrach.nwali/viz/DataJobs_16858994320410/DataJobsPostings).
 
 ![Glassdoor Dataset Analysis Image](Visualization/Glassdoor_Dataset_Analysis.png) 
 

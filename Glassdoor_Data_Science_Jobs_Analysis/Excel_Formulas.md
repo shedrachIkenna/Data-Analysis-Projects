@@ -1,6 +1,6 @@
-Data Cleaning and Exploration Using Excel 
+# Exploratory Data Analysis using Excel
 
-------------------------------------------------------------------------------------------------------------------------------------------------
+*** 
 -- Based on certain keywords, I placed the job titles into four categories namely:
 -- Data Scientist
 -- Data Analyst
@@ -69,7 +69,7 @@ Data Cleaning and Exploration Using Excel
  "Bsc Required", 0)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
--- Based on certain keywords as specified in thr formula below, I was able to check if a Master's degree is required from the job description column
+-- Based on certain keywords as specified in the formula below, I was able to check if a Master's degree is required from the job description column
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 -- I used the IF, OR, ISNUMBER, SEARCH and FIND functions to perform logical tests
 -- The logical test checks for certain keywords in each job description to determine whether a Master's degree is required or not

@@ -1,3 +1,6 @@
+**EXPLORATORY DATA ANALYSIS**
+
+```sql
 Create Table appleStore_description_combined AS 
 
 Select * from appleStore_description1
@@ -13,45 +16,65 @@ select * From appleStore_description3
 union all 
 
 select * from appleStore_description4
+```
+---
 
+- Check the number of unique apps in appleStore table by checking the count of unique ids
 
-**EXPLORATORY DATA ANALYSIS**
-
--- Check the number of unique apps in appleStore table by checking the count of unique ids
-
+```sql
 Select count(DISTINCT id) as UniqueAppsIDs 
-From AppleStore 
+From AppleStore
+```
 
--- Check the number of unique apps in appleStore_description_combined table by checking the count of unique ids
+---
 
+- Check the number of unique apps in appleStore_description_combined table by checking the count of unique ids
+
+```sql
 select Count(DISTINCT id) as uniqueAppsIDs
-from appleStore_description_combined 
+from appleStore_description_combined
+```
 
--- Check for any missing values in key fields
+---
 
+- Check for any missing values in key fields
+
+```sql
 select count(*) as MissingValues 
 from AppleStore
 where track_name is null or user_rating is null or prime_genre is null 
 
 select count(*) as MissingValues 
 from appleStore_description_combined 
-where app_desc is null 
+where app_desc is null
+```
+---
 
--- Find out the number of apps per genre
+- Find out the number of apps per genre
 
+```sql
 select prime_genre, count(*) as genreCount
 from AppleStore
 group by prime_genre 
 order by genreCount DESC
+```
 
--- Get an overview of apps ratings
+---
 
+- Get an overview of apps ratings
+
+```sql
 Select min(user_rating) as MinUserRating,
 	   max(user_rating) as MaxUserRating,
        avg(user_rating) as AvgUserRating
 From AppleStore
+```
 
--- Determine whether paid apps have higher ratings than free appsAppleStore
+---
+
+- Determine whether paid apps have higher ratings than free appsAppleStore
+
+```sql
 Select CASE
 	When price > 0 then 'Paid'
     ELSE 'Free'
@@ -60,9 +83,13 @@ avg(user_rating) as AvgUserRatings
 From AppleStore
 Group by AppType
 order by AvgUserRatings DESC
+```
 
--- Check if apps with more supported languages have higher ratings 
+---
 
+- Check if apps with more supported languages have higher ratings 
+
+```sql
 Select case 
           When lang_num < 10 Then '<10 languages'
           When lang_num BETWEEN 10 and 30 Then '10-30 languages'
@@ -78,10 +105,14 @@ select prime_genre,
 From AppleStore
 Group by prime_genre
 order by AvgUserRatings ASC
-LIMIT 10 
+LIMIT 10
 
--- Check if there is correlation between the length of the app description and the user rating
+```
 
+---
+- Check if there is correlation between the length of the app description and the user rating
+
+```sql
 Select 
 	Case 
     	When length(B.app_desc) < 500 Then 'Short description'
@@ -96,19 +127,25 @@ Join
 On 
 	A.id = B.id 
 Group by description_length_bucket
-Order by AvgUserRatings desc 
+Order by AvgUserRatings desc
+```
+---
 
--- Find the average user ratings for each app prime_genre
+- Find the average user ratings for each app prime_genre
 
+```sql
 select 
 	track_name,
     prime_genre,
     user_rating,
 	avg(user_rating) over(partition by prime_genre) as Avg_User_Ratings
 From AppleStore
+```
+---
 
--- Check the top rated apps for each genre 
+- Check the top rated apps for each genre 
 
+```sql
 select 
 	prime_genre,
     track_name,
@@ -124,10 +161,12 @@ From (
     From AppleStore
   	) as x
 Where x.rank = 1
-  
+```
+---
 
--- Display a list of all 5 rated apps sorted by prime_genre
+- Display a list of all 5 rated apps sorted by prime_genre
 
+```sql
 select 
 	track_name,
     prime_genre,
@@ -135,11 +174,15 @@ select
 From AppleStore
 where 
 	user_rating >= 5
-order by prime_genre 
+order by prime_genre
+```
 
--- Assuming that apps added previously to the applestore have a lower app id than apps added later on, 
--- Find the first two apps that was added on each prime_genreAppleStore
+---
 
+- Find the first two apps that was added on each prime_genreAppleStore
+Assuming that apps added previously to the applestore have a lower app id than apps added later on,
+
+```sql
 select * from (
   select 
       id,
@@ -150,6 +193,7 @@ select * from (
   From AppleStore a
 ) x 
 where x.rn < 3
+```
 
 
     

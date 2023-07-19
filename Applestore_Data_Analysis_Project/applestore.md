@@ -168,7 +168,7 @@ Where x.rank = 1
 
 ```sql
 select 
-	track_name,
+    track_name,
     prime_genre,
     user_rating
 From AppleStore

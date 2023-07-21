@@ -93,7 +93,7 @@ Through the analysis of Glassdoor's data science job postings dataset, several k
 - The most saught after tech skill for data analyst and data engineers is Sql. 
 
 By using the filters, we can gain more insights and unravel hidden key findings about specific job roles. For example
-- Above 50% of all machine learning job postings require a Ph.d 
+- More than 50% of all machine learning job postings require a Ph.d 
 
 ## Note
 

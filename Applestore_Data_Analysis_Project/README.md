@@ -85,4 +85,13 @@ The solutions to these questions are found [here](https://github.com/shedrachIke
 After analysing this Applestore dataset, severeal key findings emerged that revealed that: 
 * Paid apps generally have better ratings compared to free apps
 * Apps supporting between 10 and 30 languages have better ratings
-* Finance and Book apps have low ratings 
+* Finance and Book apps have low ratings
+* Apps with a longer description have better ratings
+* Game and entertainment app genre have high competition
+
+## Recommendations 
+* If you are an app developer or stakeholder in the iOS development industry and your app is perceived as having high value and quality, the data analysis indicates that paid apps tend to receive higher user ratings than free ones. It may be worthwhile to charge a fee for your app to capitalize on its positive reception and potentially increase its ratings.
+* The data analysis shows that apps that support between 10 and 30 languages have higher ratings. Therefore, it's not about the number of languages your app supports, but focusing on the right ones.
+* It is likely that user needs are not fully met in genres such as Finance and Books. As a result, there is potential for a high user rating and penetration with very low competition if you can create quality apps in this genre that address users' needs better than the current market apps.
+* The length of the app description has a positive correlation with the user ratings. This means that users appreciate detailed and clear descriptions that help them understand an app's features and capabilities before they decide to download it. So, taking the time to craft a comprehensive and well-explained app description can lead to happier users, which in turn, may boost your app's ratings and satisfaction level.
+* On average, all the apps have a rating of 3.5 so aiming for a user rating above the average of 3.5 is a wise strategy to stand out from the crowd. Since the average rating is 3.5, achieving a higher rating indicates that users find your app to be above average and more satisfying than the majority of apps.

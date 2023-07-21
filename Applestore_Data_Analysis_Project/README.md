@@ -79,4 +79,4 @@ Just as stated in the project goals, data analysis of this dataset aims to provi
 * Whats the average user ratings for each app genre?
 * What are the top rated apps for each genre?
 
-The solutions to these questions are found [here]()
+The solutions to these questions are found [here](https://github.com/shedrachIkenna/Data-Analysis-Projects/blob/master/Applestore_Data_Analysis_Project/applestore.md)

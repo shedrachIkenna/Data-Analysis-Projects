@@ -3,7 +3,7 @@ This repository serves as a curated collection of projects showcasing my experti
 
 The following are the data analysis projects contained in this repo
 - [Applestore Data Analysis Project](https://github.com/shedrachIkenna/Data-Analysis-Projects/tree/master/Applestore_Data_Analysis_Project)
-- [Glassdoor Data Science Jobs Analysis Project]()
+- [Glassdoor Data Science Jobs Analysis Project](https://github.com/shedrachIkenna/Data-Analysis-Projects/tree/master/Glassdoor_Data_Science_Jobs_Analysis)
 
 
 ## Glassdoor Data Science Jobs Analysis Project

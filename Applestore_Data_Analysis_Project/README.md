@@ -80,3 +80,9 @@ Just as stated in the project goals, data analysis of this dataset aims to provi
 * What are the top rated apps for each genre?
 
 The solutions to these questions are found [here](https://github.com/shedrachIkenna/Data-Analysis-Projects/blob/master/Applestore_Data_Analysis_Project/applestore.md)
+
+## Key Findings
+After analysing this Applestore dataset, severeal key findings emerged that revealed that: 
+* Paid apps generally have better ratings compared to free apps
+* Apps supporting between 10 and 30 languages have better ratings
+* Finance and Book apps have low ratings 

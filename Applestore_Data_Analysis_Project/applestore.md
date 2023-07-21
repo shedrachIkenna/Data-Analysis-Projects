@@ -1,200 +1,154 @@
-**EXPLORATORY DATA ANALYSIS**
+SELECT * 
+FROM PortfolioProject..AppleStore
 
-```sql
-Create Table appleStore_description_combined AS 
+SELECT *
+FROM PortfolioProject..applestore_description
 
-Select * from appleStore_description1
+--EXPLORATORY DATA ANALYSIS
 
-union all 
+-- Check the number of unique apps in appleStore table BY checking the COUNT of unique ids
 
-select * From appleStore_description2
+SELECT 
+	COUNT(DISTINCT id) AS UniqueIds
+FROM PortfolioProject..AppleStore
 
-Union all 
+-- Check the number of unique apps in appleStore_description_combined table BY checking the COUNT of unique ids
 
-select * From appleStore_description3
+SELECT 
+	COUNT(DISTINCT id) AS UniqueIds
+FROM PortfolioProject..appleStore_description
 
-union all 
+-- Check for missing values in key fields of AppleStore table
 
-select * from appleStore_description4
-```
----
+SELECT COUNT(*) AS MissingValues 
+FROM PortfolioProject..AppleStore
+WHERE track_name IS NULL OR user_rating IS NULL OR prime_genre IS null
 
-- Check the number of unique apps in appleStore table by checking the count of unique ids
+-- Check for missing values in key fields of appleStore_description table
 
-```sql
-Select count(DISTINCT id) as UniqueAppsIDs 
-From AppleStore
-```
+SELECT COUNT(*) AS MissingValues 
+FROM PortfolioProject..appleStore_description 
+WHERE app_desc IS NULL
 
----
+-- Find out the number of apps per genre 
 
-- Check the number of unique apps in appleStore_description_combined table by checking the count of unique ids
+SELECT prime_genre, COUNT(prime_genre) AS genreCount
+FROM PortfolioProject..AppleStore
+GROUP BY prime_genre
+ORDER BY genreCount desc
 
-```sql
-select Count(DISTINCT id) as uniqueAppsIDs
-from appleStore_description_combined
-```
+-- Get an overview of apps ratings
 
----
+SELECT 
+	MIN(user_rating) AS MinUserRating,
+	MAX(user_rating) AS MaxUserRating,
+	AVG(user_rating) AS AvgUserRating
+FROM PortfolioProject..AppleStore
 
-- Check for any missing values in key fields
+-- Determine whether paid apps have higher ratings than free apps
 
-```sql
-select count(*) as MissingValues 
-from AppleStore
-where track_name is null or user_rating is null or prime_genre is null 
+SELECT 
+	AppType,
+	COUNT(AppType) AS AppTypeCount,
+	AVG(user_rating) AS AvgUserRatings
+FROM (
+	SELECT 
+		user_rating,
+		Case
+			WHEN price > 0 THEN 'Paid'
+			ELSE 'Free'
+		END AS AppType
+	FROM PortfolioProject..AppleStore
+) AS AppTypeTableCount
+GROUP BY AppType
+Order BY AvgUserRatings DESC
 
-select count(*) as MissingValues 
-from appleStore_description_combined 
-where app_desc is null
-```
----
+-- Check if apps with more supported languages have higher ratings 
 
-- Find out the number of apps per genre
+SELECT 
+	LanguageBucket,
+	COUNT(LanguageBucket) AS LanguageBucketCount,
+	AVG(user_rating) AS AvgUserRatings
+FROM (
+	SELECT 
+		user_rating,
+		Case 
+			WHEN lang_num < 10 Then '<10 Languages'
+			WHEN lang_num Between 10 and 30 Then '10-30 Languages'
+			ELSE '>30 Languages'
+		END AS LanguageBucket 
+	FROM PortfolioProject..AppleStore 
+	) AS LanguageBucketTable 
+GROUP BY LanguageBucket
+Order BY AvgUserRatings DESC
 
-```sql
-select prime_genre, count(*) as genreCount
-from AppleStore
-group by prime_genre 
-order by genreCount DESC
-```
+-- Check if there IS a correlation between length of app description and user rating
 
----
+SELECT 
+	description_length_bucket,
+	COUNT(description_length_bucket) AS DescLenCount,
+	AVG(user_rating) AS AvgUserRatings
+FROM (
+	SELECT
+		user_rating,
+		Case
+			WHEN len(app_desc) < 500 Then 'Short description'
+			WHEN len(app_desc) Between 500 and 1000 Then 'Medium description'
+			ELSE 'Long Description'
+		END AS description_length_bucket
+	FROM PortfolioProject..AppleStore A 
+	JOIN 
+	PortfolioProject..appleStore_description B
+	ON 
+	A.id = B.id
+) AS DescriptionLength
+GROUP By description_length_bucket
+Order BY AvgUserRatings DESC
 
-- Get an overview of apps ratings
+-- Find the average user ratings for each app genre with the app names
 
-```sql
-Select min(user_rating) as MinUserRating,
-	   max(user_rating) as MaxUserRating,
-       avg(user_rating) as AvgUserRating
-From AppleStore
-```
+SELECT 
+	track_name,
+	prime_genre
+	user_rating,
+	AVG(user_rating) over(Partition BY prime_genre) AS AvgUserRatings
+FROM PortfolioProject.. AppleStore 
 
----
 
-- Determine whether paid apps have higher ratings than free appsAppleStore
+-- Find the average user ratings for each app genres
+SELECT 
+	prime_genre,
+	AVG(user_rating) AS AvgUserRatings
+FROM PortfolioProject..AppleStore 
+GROUP BY prime_genre
+Order BY AvgUserRatings
 
-```sql
-Select CASE
-	When price > 0 then 'Paid'
-    ELSE 'Free'
-End as AppType,
-avg(user_rating) as AvgUserRatings
-From AppleStore
-Group by AppType
-order by AvgUserRatings DESC
-```
+-- Find out the top rated apps for each app genre
 
----
+SELECT 
+	track_name,
+	user_rating,
+	prime_genre,
+	rating_count_tot
+FROM (
+	SELECT 
+		track_name,
+		user_rating,
+		prime_genre,
+		rating_count_tot,
+		rank() over(Partition BY prime_genre ORDER BY user_rating desc, rating_count_tot desc) AS Rank
+	FROM PortfolioProject..AppleStore
+) AS X
+WHERE X.Rank = 1
+Order BY rating_count_tot desc
 
-- Check if apps with more supported languages have higher ratings 
+-- Display a list of all 5 rated apps sorted BY prime_genre
 
-```sql
-Select case 
-          When lang_num < 10 Then '<10 languages'
-          When lang_num BETWEEN 10 and 30 Then '10-30 languages'
-          ELSE '>30 languages'
-	   end as language_bucket,
-       avg(user_rating) as AvgUserRatings
-From AppleStore
-Group by language_bucket
-order by AvgUserRatings DESC
-
-select prime_genre,
-	   avg(user_rating) as AvgUserRatings
-From AppleStore
-Group by prime_genre
-order by AvgUserRatings ASC
-LIMIT 10
-
-```
-
----
-- Check if there is correlation between the length of the app description and the user rating
-
-```sql
-Select 
-	Case 
-    	When length(B.app_desc) < 500 Then 'Short description'
-        When length(B.app_desc) between 500 and 1000 Then 'Medium description'
-        else 'Long description' 
-    End as description_length_bucket,
-    avg(user_rating) as AvgUserRatings
-From 
-	AppleStore as A 
-Join 
-	appleStore_description_combined as B 
-On 
-	A.id = B.id 
-Group by description_length_bucket
-Order by AvgUserRatings desc
-```
----
-
-- Find the average user ratings for each app prime_genre
-
-```sql
-select 
+SELECT 
 	track_name,
     prime_genre,
-    user_rating,
-	avg(user_rating) over(partition by prime_genre) as Avg_User_Ratings
-From AppleStore
-```
----
-
-- Check the top rated apps for each genre 
-
-```sql
-select 
-	prime_genre,
-    track_name,
-    user_rating,
-    rating_count_tot
-From (
-    select 
-        prime_genre,
-        track_name,
-        user_rating,
-        rating_count_tot,
-        rank() over (partition by prime_genre order by user_rating DESC, rating_count_tot DESC) as rank 
-    From AppleStore
-  	) as x
-Where x.rank = 1
-```
----
-
-- Display a list of all 5 rated apps sorted by prime_genre
-
-```sql
-select 
-    track_name,
-    prime_genre,
     user_rating
-From AppleStore
+FROM PortfolioProject..AppleStore
 where 
 	user_rating >= 5
-order by prime_genre
-```
-
----
-
-- Find the first two apps that was added on each prime_genreAppleStore
-Assuming that apps added previously to the applestore have a lower app id than apps added later on,
-
-```sql
-select * from (
-  select 
-      id,
-      track_name,
-      prime_genre,
-      user_rating,
-      row_number() over(partition by prime_genre order by id) as rn
-  From AppleStore a
-) x 
-where x.rn < 3
-```
-
-
-    
-    
+ORDER BY prime_genre 

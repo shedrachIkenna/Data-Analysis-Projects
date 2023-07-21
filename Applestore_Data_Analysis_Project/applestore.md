@@ -1,4 +1,4 @@
-**EXPLORATORY DATA ANALYSIS**
+**APPLESTORE APPS DATA ANALYSIS**
 
 - Check the number of unique apps in appleStore table table by checking the count of unique ids
 

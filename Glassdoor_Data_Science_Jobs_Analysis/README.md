@@ -26,7 +26,7 @@ Additionally, I utilized Tableau for data visualization. Tableau offers a robust
 
 ## Project Goals
 
-The primary goal of this repository is to explore and analyze the Glassdoor data science jobs dataset to gain insights into the industry. Through data analysis and visualization techniques, we aim to answer various questions such as:
+The primary goal of this project is to explore and analyze the Glassdoor data science jobs dataset to gain insights into the industry. Through data analysis and visualization techniques, I was able to answer various questions such as:
 
 - What are the most common job titles in the data science field?
 - What are the average salaries of different data science job roles?

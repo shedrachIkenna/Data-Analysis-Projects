@@ -107,6 +107,18 @@ GROUP BY LanguageBucket
 Order BY AvgUserRatings DESC
 
 ```
+---
+
+-- Check genre with low user rating
+
+```sql
+SELECT prime_genre,
+	   AVG(user_rating) AS AvgUserRatings
+FROM AppleStore
+GROUP BY prime_genre
+ORDER BY AvgUserRatings ASC
+LIMIT 10
+```
 
 ---
 - Check if there is correlation between the length of the app description and the user rating

@@ -2,7 +2,8 @@
 This repository serves as a curated collection of projects showcasing my expertise in data analysis across various domains.
 
 The following are the data analysis projects contained in this repo
-- Glassdoor Data Science Jobs Analysis Project
+- [Applestore Data Analysis Project]()
+- [Glassdoor Data Science Jobs Analysis Project]()
 
 
 ## Glassdoor Data Science Jobs Analysis Project

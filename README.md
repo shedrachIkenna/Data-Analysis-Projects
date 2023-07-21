@@ -17,3 +17,11 @@ Data analysis of this dataset aims to provide actionable insights and data-drive
 ## Glassdoor Data Science Jobs Analysis Project
 
 In this project, I analyzed the Glassdoor data science job postings dataset to gain insights into the trends, patterns, and characteristics of data science job postings. The objective was to uncover meaningful information that can inform job seekers, employers, and professionals interested in the field of data science. The project is found [here](Glassdoor_Data_Science_Jobs_Analysis).
+
+The primary goal of this project is to explore and analyze the Glassdoor data science jobs dataset to gain insights into the industry. Through data analysis and visualization techniques, I was able to answer various questions such as:
+
+- What are the most common job titles in the data science field?
+- What are the average salaries of different data science job roles?
+- What are the most in-demand skills for data science jobs?
+- What are most sought after level of education required?
+

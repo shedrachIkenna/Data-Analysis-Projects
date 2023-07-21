@@ -8,3 +8,10 @@ By identifying relationships between variables, I was able to uncover patterns, 
 * Is there a correlation between the lenght of app description and user ratings?
 * Whats the average user ratings for each app genre?
 * What are the top rated apps for each genre?
+
+## Data Source
+This [dataset](https://www.kaggle.com/datasets/ramamet4/app-store-apple-data-set-10k-apps) was obtained from [Kaggle](https://www.kaggle.com) which is a popular and reliable data source for data science and machine learning enthusiasts. The dataset is quite old and hasn't been update for while but it provided an opportunity to showcase my EDA skills. The dataset comes in a .csv file format. I downloaded it, imported it into a database in Microsoft Sql Server Management Studio for analysis.
+
+## Tool Used 
+* Microsoft Sql Server Management Studio (SSMS)
+* 

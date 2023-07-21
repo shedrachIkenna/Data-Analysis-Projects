@@ -1,7 +1,7 @@
 # Applestore Data Analysis
 
 ## Introduction
-The primary objective of carrying out this Exploratory Data Analysis on the applestore dataset is to gain insights into the mobile apps market by exploring features such as app genres, pricing trends, user ratings and more.
+The primary objective of carrying out a Data Analysis on the applestore dataset is to gain insights into the mobile apps market by exploring features such as app genres, pricing trends, user ratings and more.
 By identifying relationships between variables, I was able to uncover patterns, identify outliers and uncover meaningful conclusions. 
 
 ## Data Source

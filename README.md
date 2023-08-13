@@ -4,6 +4,7 @@ This repository serves as a curated collection of projects showcasing my experti
 The following are the data analysis projects contained in this repo
 - [Applestore Data Analysis Project](https://github.com/shedrachIkenna/Data-Analysis-Projects/tree/master/Applestore_Data_Analysis_Project)
 - [Glassdoor Data Science Jobs Analysis Project](https://github.com/shedrachIkenna/Data-Analysis-Projects/tree/master/Glassdoor_Data_Science_Jobs_Analysis)
+- [Bank Statement Analysis](https://github.com/shedrachIkenna/Data-Analysis-Projects/tree/master/Bank_Statement_Analysis)
 
 
 ## Applestore Data Analysis Project
@@ -13,6 +14,8 @@ Data analysis of this dataset aims to provide actionable insights and data-drive
 * Is there a correlation between the lenght of app description and user ratings?
 * Whats the average user ratings for each app genre?
 * What are the top rated apps for each genre?
+
+The project is found [here](Applestore_Data_Analysis_Project).
 
 ## Glassdoor Data Science Jobs Analysis Project
 
@@ -25,3 +28,12 @@ The primary goal of this project is to explore and analyze the Glassdoor data sc
 - What are the most in-demand skills for data science jobs?
 - What are most sought after level of education required?
 
+## Bank Statement Analysis
+This project focuses on leveraging data analysis to uncover hidden insights within my bank statements. The primary objective of this project is to offer a comprehensive understanding of my personal financial habits, expenditures, and financial health. I was able to answer various questions such as
+- What days of the week do I spend more?
+- What are my most recurring expenses?
+- Are there any outliers in my spending pattern?
+- What do I spend most of my money on?
+- How much are my total incomes, expenses and savings
+
+See project [here](Bank_Statement_Analysis).

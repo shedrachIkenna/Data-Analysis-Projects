@@ -51,6 +51,20 @@ df = df.drop_duplicates()
 #### Step 3: Handle Missing Values
 Missing values only appeared in the debit and credit columns. but, Looking at the dataset, I wouldn't say the values were missing, rather I would say they were empty. I would say this because each row represented either a debit or credit transaction, therefore, in a debit transaction row, we have only the debit value with and empty credit value and same goes for the credit transaction row.
 I placed the empty values with zero
+
+Note that I copied my dataset into another variable df_main to get rid of some warning errors jupyter notebook was throwing at me 
 ```python 
 df_main[['debit', 'credit']] = df_main[['debit', 'credit']].fillna(0)
+```
+
+#### Step 4: Format Date 
+I had to ensure that the date and value date columns were formatted properly. 
+```
+df_main.info
+```
+Showed information about the datatypes associated with every column. 
+I converted that date and date value column from object data type to date datatype 
+```python 
+df_main['date'] = pd.to_datetime(df_main['date'], format='%d/%m/%Y')
+df_main['value date'] = pd.to_datetime(df_main['value date'], format='%d/%m/%Y')
 ```

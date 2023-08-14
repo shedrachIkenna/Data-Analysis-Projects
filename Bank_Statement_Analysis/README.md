@@ -38,12 +38,19 @@ import pandas as pd
 df = pd.read_csv(r"C:\Users\DELL\Desktop\DataSets\Zenith_Bank_Statement.csv")
 ```
 
-### Step 2: Remove Duplicates 
-This step was fairly easy. I had so first reviewed the duplicated by running the code below
+#### Step 2: Remove Duplicates 
+This step was fairly easy. I had so first see the duplicates by running the code below
 ```python
 df[df.duplicated(keep=False)]
 ```
 I proceeded in dropping the duplicates
 ```python
 df = df.drop_duplicates()
+```
+
+#### Step 3: Handle Missing Values
+Missing values only appeared in the debit and credit columns. but, Looking at the dataset, I wouldn't say the values were missing, rather I would say they were empty. I would say this because each row represented either a debit or credit transaction, therefore, in a debit transaction row, we have only the debit value with and empty credit value and same goes for the credit transaction row.
+I placed the empty values with zero
+```python 
+df_main[['debit', 'credit']] = df_main[['debit', 'credit']].fillna(0)
 ```

@@ -27,7 +27,7 @@ The project aims to address questions such as:
 By answering these questions, we'll be able to uncover hidden connections within my financial data which will also provide a clearer view of my financial health, spending trends, and potential areas for optimization.  This project is driven by the aspiration to transform raw transactional data into actionable insights that can enhance my financial decision-making and guide future money management strategies 
 
 
-Data Cleaning and Exploration 
+## Data Cleaning and Exploration 
 Data in its raw form often carries imperfections that can obscure insights. Therefore, this is a crucial step in the process of this data analysis project because it plays a pivotal role in shaping the reliability and credibility of subsequent analysis. The primary objective here is to address these imperfections, ensuring that the dataset is accurate, consistent and ready for analysis. The following steps were used: 
 
 #### Step 1: Import the Data
@@ -67,4 +67,127 @@ I converted that date and date value column from object data type to date dataty
 ```python 
 df_main['date'] = pd.to_datetime(df_main['date'], format='%d/%m/%Y')
 df_main['value date'] = pd.to_datetime(df_main['value date'], format='%d/%m/%Y')
+```
+#### Step 5: Categorize Transactions 
+I created a new column for transaction categories based on keywords for the description column as this categorization will later help us in understanding spending patterns. 
+
+I created the following transaction categories:
+- Bank Charges
+- Airtime
+- Eat outs
+- Digital Wallets
+- Rent
+- My baby
+- Dt
+- Selfcare
+- Cash deposit
+- Enike
+- Mom 
+- Dad
+- Aunty Helen 
+- Side business
+- Fines
+- Caleb
+
+
+```python
+# Bank Charge
+
+df_main['category'] = np.where(df_main['description'].str.contains(
+    'vat|electronic money transfer levy|sms notification charge|sms notification charge|visa card maintenance fee'), 
+    'Bank charge', df_main['category'] )
+    
+# Airtime
+
+df_main['category'] = np.where(df_main['description'].str.contains(
+    'mtn|airtel|9mobile|08039646573'), 
+    'Airtime', df_main['category'] )
+                               
+#Eat Outs
+
+df_main['category'] = np.where(df_main['description'].str.contains(
+    'yum delivery|yum\ndelivery|hasina confectionery|stone\ncastlerestaurant|/henry\nadebayo/fcmb/sheddy'), 
+    'Eat outs', df_main['category'] )
+
+#SelfCare
+
+df_main['category'] = np.where(df_main['description'].str.contains(
+    'chukwubueze paschal\nugwumba/opay|paystack|chukwubueze paschal|abdulsamad ayobami|chikwendu|ibrahim yakubu'), 
+    'Selfcare', df_main['category'] )
+
+#Digital Wallets
+
+df_main['category'] = np.where(df_main['description'].str.contains(
+    'shedrach\nnwali/gomon|ikenna\nshedrach/kuda|gomon'), 
+    'Digital Wallets', df_main['category'] )
+
+#My baby
+
+df_main['category'] = np.where(df_main['description'].str.contains(
+    'yunusa sarah\njenebu/gtb|yunusa sarah jenebu|khadija/gtb|jenebu'), 
+    'My baby', df_main['category'] )
+
+# DT
+
+df_main['category'] = np.where(df_main['description'].str.contains(
+    'daniel tolani|olorunyomi'), 
+    'DT', df_main['category'] )
+
+# Enike
+
+df_main['category'] = np.where(df_main['description'].str.contains(
+    'enike braimoh|enike\nbraimoh'), 
+    'enike braimoh', df_main['category'] )
+
+# Mom
+
+df_main['category'] = np.where(df_main['description'].str.contains(
+    'blessing\nnwali|blessing nwali'), 
+    'Mom', df_main['category'] )
+
+# Aunty Helen
+
+df_main['category'] = np.where(df_main['description'].str.contains(
+    'helen chicka'), 
+    'Aunty Helen', df_main['category'] )
+
+
+# Dad
+
+df_main['category'] = np.where(df_main['description'].str.contains(
+    'nwali\nedwin'), 
+    'Dad', df_main['category'] )
+
+
+# Rent
+
+df_main['category'] = np.where(df_main['description'].str.contains(
+    'ibrahim sule'), 
+    'Rent', df_main['category'] )
+
+# Cash deposit
+
+df_main['category'] = np.where(df_main['description'].str.contains(
+    'shago-//tunde'), 
+    'Cash deposit', df_main['category'] )
+
+# Side business
+
+df_main['category'] = np.where(df_main['description'].str.contains(
+    'rolez/baxi---/bax_trsf_|nip/capri/cdl|/capri/cdl/copper|usaini nasiru|onyedika elias|cash/trf/045rnbe02251681035150766'), 
+    'Day Job', df_main['category'] )
+
+# Fines
+
+df_main['category'] = np.where(df_main['description'].str.contains(
+    'george imeiba'), 
+    'Fines & Dues', df_main['category'] )
+
+# Caleb
+
+df_main['category'] = np.where(df_main['description'].str.contains(
+    'caleb amowomani'), 
+    'caleb', df_main['category'] )
+
+
 ```

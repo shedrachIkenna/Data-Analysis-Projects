@@ -30,7 +30,7 @@ By answering these questions, we'll be able to uncover hidden connections within
 Data Cleaning and Exploration 
 Data in its raw form often carries imperfections that can obscure insights. Therefore, this is a crucial step in the process of this data analysis project because it plays a pivotal role in shaping the reliability and credibility of subsequent analysis. The primary objective here is to address these imperfections, ensuring that the dataset is accurate, consistent and ready for analysis. The following steps were used: 
 
-### Step 1: Import the Data
+#### Step 1: Import the Data
 As stated earlier, I downloaded that data as a PDF file, then I used Microsoft Excel to extract and merge into one sheet using the power query editor. I then saved and exported the file as a .csv format for further cleaning. I imported the .csv file into jupyter notebook using the pandas library 
 
 ```python
@@ -39,3 +39,11 @@ df = pd.read_csv(r"C:\Users\DELL\Desktop\DataSets\Zenith_Bank_Statement.csv")
 ```
 
 ### Step 2: Remove Duplicates 
+This step was fairly easy. I had so first reviewed the duplicated by running the code below
+```python
+df[df.duplicated(keep=False)]
+```
+I proceeded in dropping the duplicates
+```python
+df = df.drop_duplicates()
+```

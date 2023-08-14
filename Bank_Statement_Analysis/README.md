@@ -71,7 +71,7 @@ df_main['value date'] = pd.to_datetime(df_main['value date'], format='%d/%m/%Y')
 #### Step 5: Categorize Transactions 
 I created a new column for transaction categories based on keywords for the description column as this categorization will later help us in understanding spending patterns. 
 
-I created the following transaction categories:
+Using the np.where() function from the NumPy library, I was able to apply a condition which categorizes transactions based on certain keywords found in the transaction's description. I created the following transaction categories:
 - Bank Charges
 - Airtime
 - Eat outs
@@ -191,3 +191,15 @@ df_main['category'] = np.where(df_main['description'].str.contains(
 
 
 ```
+
+## Data Analysis
+The goal of performing this Bank Statement Data Analysis is to find some useful insights and tips for managing my money better. We can do this by exploring these key questions which where outlined earlier in the project goals 
+
+* Are there specific spending categories that dominate my transactions?
+* What are my most recurring transaction types?
+* Is there a correlation between the size of transactions and the day of the week?
+* How does my account balance fluctuate throughout the month??
+* Are there any notable anomalies or outliers in my financial activities?
+
+The solutions to these questions are found [here](https://github.com/shedrachIkenna/Data-Analysis-Projects/blob/master/Bank_Statement_Analysis/Bank%20Statement%20Analysis.ipynb)
+

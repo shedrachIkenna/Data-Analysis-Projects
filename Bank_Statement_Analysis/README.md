@@ -231,3 +231,18 @@ After analysing the Bank Statements, severeal key findings emerged that revealed
 
 #### Data Quality Assurance:
 * To ensure accurate and reliable analyses in the future, prioritize data quality. Regularly perform data validation checks and preprocessing steps to identify and rectify any anomalies or inaccuracies in the dataset. This will enhance the credibility of your analyses and the insights derived from them.
+
+
+## Visualizing Bank Statement Insights
+In the endeavor to communicate the outcomes derived from the Bank Statement Analysis project, I harnessed the power of Tableau to construct interactive and visually compelling visualizations. These visualizations stand as effective tools for presenting key findings, facilitating data comprehension and interpretation.
+
+You can explore the interactive dashboard by following this [link](https://public.tableau.com/app/profile/shedrach.nwali/viz/FinancialAccountAnalysis/Dashboard1).
+
+Below, you can find a snapshot of one of the visualizations created to provide a glimpse into the insights gained:
+![Dashboard](visualization/Dashboard_snapshot.png)
+
+Bank Statement Analysis Visualization
+
+Notably, it's important to mention that due to the intricacies of the data and the depth of insights, a subset of the visualizations was chosen for inclusion in the Tableau dashboard. This decision was made to ensure a coherent and streamlined experience for viewers, avoiding overwhelming complexity.
+
+Additionally, please note that while Tableau provides a powerful platform for visualization, the complete range of visualizations, including those that might have caused the dashboard to be congested, were crafted using Python within a Jupyter Notebook environment. This comprehensive approach allowed for a detailed exploration of insights that might not have been feasible solely within Tableau.

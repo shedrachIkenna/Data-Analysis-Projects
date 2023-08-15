@@ -211,3 +211,23 @@ After analysing the Bank Statements, severeal key findings emerged that revealed
 * March recorded the highest aggregate debits, signifying the peak of total debit transactions within the analyzed period
 * Bank charges stood out as the most frequent debits occuring 95 times.
 * There were some notable outliers. I identified that five data points exceeded the upper bounds(std dev) which implies that they were potential outliers. But, upon thorough examinations, I noticed that these outliers are accurate and valid representation of the underlying data. Given their significance and authenticity, I made an informed decision to retain these outliers within the scope of my analysis. This approach ensures that the analysis encompasses the full range of data, including these exceptional instances that provides valuable insights into the dataset
+
+
+## Recommendations 
+#### Digital Wallet Management:
+* Given that a significant portion of total debits (32%) is directed towards Digital Wallets, it is advisable to continue utilizing these platforms for efficient savings and financial transactions. Also, regular monitoring the Digital Wallet activity to ensure that funds are being used effectively and also aligns with financial goals.
+
+#### Spending on Fridays:
+* With Friday identified as the day of highest spending, consider allocating a specific budget for Fridays to better manage spendings. Implementing a budgeting strategy can help curb excessive spending on this day which also contributes to better financial discipline.
+
+#### Monthly Debit Patterns:
+* The observation of March recording the highest aggregate debits signifies a potential seasonality in spending. Monitor spending patterns across different months to identify any recurring trends. Adjust budgeting and financial plans accordingly to accommodate months with higher spending.
+
+#### Understanding Bank Charges:
+* The prominence of bank charges, occurring 95 times, suggests the significance of these debits. Carefully review the nature of these charges and consider investigating ways to minimize them. Engage with the bank to gain clarity on the types of charges incurred and explore potential options for reducing their frequency.
+
+#### Handling Outliers:
+* The identification of potential outliers is crucial to maintaining data integrity. The decision to retain verified outliers within the analysis is commendable, as it ensures a comprehensive understanding of the dataset. 
+
+#### Data Quality Assurance:
+* To ensure accurate and reliable analyses in the future, prioritize data quality. Regularly perform data validation checks and preprocessing steps to identify and rectify any anomalies or inaccuracies in the dataset. This will enhance the credibility of your analyses and the insights derived from them.

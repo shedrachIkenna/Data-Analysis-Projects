@@ -203,3 +203,11 @@ The goal of performing this Bank Statement Data Analysis is to find some useful 
 
 The solutions to these questions are found [here](https://github.com/shedrachIkenna/Data-Analysis-Projects/blob/master/Bank_Statement_Analysis/Bank%20Statement%20Analysis.ipynb)
 
+
+## Key Findings
+After analysing the Bank Statements, severeal key findings emerged that revealed that: 
+* 32% of my total debits was money sent to my Digital Wallets which is where I save
+* Friday is the day I've spent the most money
+* March recorded the highest aggregate debits, signifying the peak of total debit transactions within the analyzed period
+* Bank charges stood out as the most frequent debits occuring 95 times.
+* There were some notable outliers. I identified that five data points exceeded the upper bounds(std dev) which implies that they were potential outliers. But, upon thorough examinations, I noticed that these outliers are accurate and valid representation of the underlying data. Given their significance and authenticity, I made an informed decision to retain these outliers within the scope of my analysis. This approach ensures that the analysis encompasses the full range of data, including these exceptional instances that provides valuable insights into the dataset

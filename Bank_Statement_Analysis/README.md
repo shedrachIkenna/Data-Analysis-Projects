@@ -239,7 +239,7 @@ In the endeavor to communicate the outcomes derived from the Bank Statement Anal
 You can explore the interactive dashboard by following this [link](https://public.tableau.com/app/profile/shedrach.nwali/viz/FinancialAccountAnalysis/Dashboard1).
 
 Below, you can find a snapshot of one of the visualizations created to provide a glimpse into the insights gained:
-![Dashboard](visualization/Dashboard_snapshot.png)
+![Dashboard](Visualization/Dashboard_snapshot.png)
 
 Bank Statement Analysis Visualization
 
